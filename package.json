@@ -8,7 +8,6 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "clean": "del ./build",
     "lint": "eslint .",
-    "prepare": "husky install",
     "prepublish": "yarn run clean && yarn run build",
     "test-ci-partial": "yarn run test-coverage",
     "test-ci": "yarn run lint && yarn run test-ci-partial && codecov",
@@ -68,9 +67,6 @@
     "lint-staged": "^13.0.0",
     "prettier": "^2.0.2"
   },
-  "gitpkg": {
-    "registry": "git@github.com:ramasilveyra/public-registry.git"
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
@@ -96,5 +92,6 @@
     "printWidth": 100,
     "endOfLine": "lf",
     "arrowParens": "avoid"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
