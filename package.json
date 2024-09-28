@@ -11,8 +11,8 @@
     "prepublish": "yarn run clean && yarn run build",
     "test-ci-partial": "yarn run test-coverage",
     "test-ci": "yarn run lint && yarn run test-ci-partial && codecov",
-    "test-coverage": "yarn run jest -- --coverage",
-    "test": "jest"
+    "test-coverage": "yarn run test -- --coverage",
+    "test": "node --experimental-vm-modules $(yarn bin jest)"
   },
   "author": {
     "name": "Ramiro Silveyra d'Avila",
@@ -49,11 +49,10 @@
     "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/eslint-parser": "^7.18.2",
-    "@babel/preset-env": "^7.9.0",
-    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-env": "^7.25.4",
     "codecov": "^3.6.5",
     "conventional-changelog-cli": "^2.0.31",
     "del-cli": "^4.0.1",

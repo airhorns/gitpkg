@@ -4,11 +4,10 @@
       "@babel/env",
       {
         "targets": {
-          "node": "10.12.0"
+          "node": "18.16.0"
         },
-        "exclude": ["transform-regenerator"]
+        "exclude": ["transform-regenerator", "@babel/plugin-transform-dynamic-import"]
       }
     ]
-  ],
-  "plugins": ["dynamic-import-node"]
+  ]
 }
